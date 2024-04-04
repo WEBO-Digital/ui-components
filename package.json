@@ -10,15 +10,19 @@
     "/dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "test": "vitest run",
+    "test-watch": "vitest",
+    "test:ui": "vitest --ui"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.2",
     "@types/react": "^18.2.74",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",
@@ -29,12 +33,14 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "jsdom": "^24.0.0",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.3",
     "vite": "^5.2.8",
-    "vite-plugin-dts": "^3.8.1"
+    "vite-plugin-dts": "^3.8.1",
+    "vitest": "^1.4.0"
   },
   "peerDependencies": {
     "react": "^18.2.0"
