@@ -1,5 +1,5 @@
 {
-  "name": "components",
+  "name": "@{WEBO-Digital}/{ui-components}",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -30,7 +30,6 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@{WEBO-Digital}"
   },
-  "name": "@{user_name}/{ui-components}",
   "keywords": [],
   "author": "",
   "license": "ISC",
