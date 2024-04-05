@@ -1,12 +1,14 @@
 
 # Intuji UI Components ♾️
 
+![Logo](./Logo.jpg)
+
 A collection of reusable, unit-tested, scalable UI components.
 
 * **Tailwind CSS**-Powered: Leverages the utility-first approach of Tailwind CSS to create a modular and customizable component library.
 
 * **TypeScript** Integrated: Employs TypeScript to ensure type safety and enhance the developer experience.
-    
+
 * **Tailwind Merge** for Efficient Class Composition: Utilizes Tailwind Merge to seamlessly combine Tailwind utility classes.
 
 * **Class Variance Authority (CVA)** for Flexible Styling: Utilizes CVA to manage complex component styles and variants.
@@ -16,7 +18,7 @@ A collection of reusable, unit-tested, scalable UI components.
 * **Storybook** for Component Development: Integrates Storybook for isolated component development, documentation, and visual testing.
 
 
-    
+
 
 
 ## Roadmap 🛣️
@@ -44,7 +46,7 @@ To run tests, run the following command
 
 ## Documentation 📃
 
-The documentation for this Component Libraray has been deployed to Vercel at 
+The documentation for this Component Libraray has been deployed to Vercel at
 > *https://ui-components-mu.vercel.app/*
 
 
