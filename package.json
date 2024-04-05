@@ -1,5 +1,5 @@
 {
-  "name": "ui-components",
+  "name": "@webo-digital/ui-components",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -28,7 +28,7 @@
     ]
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@{WEBO-Digital}"
+    "@webo-digital:registry": "https://npm.pkg.github.com/"
   },
   "keywords": [],
   "author": "",
