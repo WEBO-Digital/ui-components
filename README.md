@@ -18,3 +18,54 @@ A collection of reusable, unit-tested, scalable UI components.
 
     
 
+
+## Roadmap 🛣️
+
+Foundational Components: Implement basic components with consistent styling and comprehensive documentation.
+
+Advanced Components: Develop more complex components with enhanced flexibility, configurability, and optimized performance.
+
+Data Visualization and Form Components: Integrate chart, graph, and form-related components with popular libraries and the Tailwind CSS-based design system.
+
+Navigation and Feedback Components: Create navigation and user feedback components optimized for accessibility and smooth integration with application-level state.
+
+Continuous Improvement and Expansion: Regularly gather user feedback, refine the component library, expand Storybook capabilities, and explore emerging front-end trends.
+
+
+
+## Running Tests 🛠️
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
+
+## Documentation 📃
+
+The documentation for this Component Libraray has been deployed to Vercel at 
+> *https://ui-components-mu.vercel.app/*
+
+
+
+
+
+## Deployment 🏄‍♂️
+
+Deployed to Github Package Registry:
+> *https://github.com/WEBO-Digital/ui-components/pkgs/npm/ui-components*
+
+
+
+## Acknowledgements
+
+ - [shadcn/ui](https://ui.shadcn.com/) 💚
+ - [Class Variance Authority](https://cva.style/docs) 💚
+
+
+
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+
