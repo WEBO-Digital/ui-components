@@ -4,9 +4,7 @@ import Button, { ButtonProps } from "../Button";
 const Example: FC<ButtonProps> = ({
   disabled = false,
   onClick = () => {},
-  primary = true,
   size = "small",
-  text = "Button",
 }) => {
   return (
     <div
@@ -17,13 +15,7 @@ const Example: FC<ButtonProps> = ({
         height: "100%",
       }}
     >
-      <Button
-        size={size}
-        text={text}
-        disabled={disabled}
-        onClick={onClick}
-        primary={primary}
-      />
+      <Button size={size} disabled={disabled} label="Hello" onClick={onClick} />
     </div>
   );
 };

@@ -1,33 +1,41 @@
-import React, { type MouseEventHandler } from "react";
+import React, { type ComponentPropsWithRef } from "react";
+import { type VariantProps } from "cva";
+import { buttonStyles } from "./helpers";
+import { cn } from "../../lib/utils";
 
-export type ButtonProps = {
-  text: string;
-  primary?: boolean;
-  disabled?: boolean;
-  size?: "small" | "medium" | "large";
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-  // Add any other suitable props here
-};
+type ButtonElementProps = ComponentPropsWithRef<"button">;
 
-const Button: React.FC<ButtonProps> = ({
-  text,
-  primary = false,
-  disabled = false,
-  size = "medium",
-  onClick,
-  // Add any other suitable props here
-}) => {
-  const buttonClasses = `rounded-md px-4 py-2 ${
-    primary ? "bg-blue-500 text-white" : "bg-gray-300 text-gray-700"
-  } ${
-    size === "small" ? "text-sm" : size === "large" ? "text-lg" : "text-base"
-  }`;
+export interface ButtonProps
+  extends ButtonElementProps,
+    VariantProps<typeof buttonStyles> {
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
+  label?: string;
+}
 
+export default function Button({
+  className,
+  buttonType,
+  size,
+  rounded,
+  label,
+  rightIcon,
+  spacing,
+  leftIcon,
+  ...props
+}: ButtonProps) {
   return (
-    <button className={buttonClasses} disabled={disabled} onClick={onClick}>
-      {text}
+    <button
+      className={cn(
+        buttonStyles({ buttonType, size, rounded, spacing }),
+        className,
+      )}
+      type="button"
+      {...props}
+    >
+      {Boolean(leftIcon) && leftIcon}
+      {Boolean(label) && label}
+      {Boolean(rightIcon) && rightIcon}
     </button>
   );
-};
-
-export default Button;
+}
