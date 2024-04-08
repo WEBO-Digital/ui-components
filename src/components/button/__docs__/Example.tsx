@@ -9,6 +9,8 @@ const Example: FC<ButtonProps> = ({
   rounded = "default",
   spacing = "default",
   label,
+  leftIcon,
+  rightIcon,
 }) => {
   return (
     <div
@@ -23,6 +25,8 @@ const Example: FC<ButtonProps> = ({
         size={size}
         disabled={disabled}
         buttonType={buttonType}
+        leftIcon={leftIcon}
+        rightIcon={rightIcon}
         rounded={rounded}
         spacing={spacing}
         label={label}
