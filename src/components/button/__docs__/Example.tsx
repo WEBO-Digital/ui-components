@@ -6,6 +6,8 @@ const Example: FC<ButtonProps> = ({
   onClick = () => {},
   size = "default",
   buttonType = "primary",
+  rounded = "default",
+  spacing = "default",
   label,
 }) => {
   return (
@@ -21,6 +23,8 @@ const Example: FC<ButtonProps> = ({
         size={size}
         disabled={disabled}
         buttonType={buttonType}
+        rounded={rounded}
+        spacing={spacing}
         label={label}
         onClick={onClick}
       />

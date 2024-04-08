@@ -21,6 +21,17 @@ const meta = {
       options: ["default", "small", "large", "xxl"],
       control: { type: "radio" },
     },
+    disabled: {
+      control: { type: "boolean" },
+    },
+    spacing: {
+      options: ["default", "small", "large", "xxl"],
+      control: { type: "radio" },
+    },
+    rounded: {
+      options: ["default", "sm", "lg", "xl", "xxl", "none", "full"],
+      control: { type: "radio" },
+    },
   },
   parameters: {
     controls: { expanded: true },
@@ -40,5 +51,6 @@ export const Basic: Story = {
       window.console.log("Button clicked!");
     },
     buttonType: "primary",
+    spacing: "default",
   },
 };
