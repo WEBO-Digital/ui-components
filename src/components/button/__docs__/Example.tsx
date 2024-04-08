@@ -4,7 +4,13 @@ import Button, { ButtonProps } from "../Button";
 const Example: FC<ButtonProps> = ({
   disabled = false,
   onClick = () => {},
-  size = "small",
+  size = "default",
+  buttonType = "primary",
+  rounded = "default",
+  spacing = "default",
+  label,
+  leftIcon,
+  rightIcon,
 }) => {
   return (
     <div
@@ -15,7 +21,17 @@ const Example: FC<ButtonProps> = ({
         height: "100%",
       }}
     >
-      <Button size={size} disabled={disabled} label="Hello" onClick={onClick} />
+      <Button
+        size={size}
+        disabled={disabled}
+        buttonType={buttonType}
+        leftIcon={leftIcon}
+        rightIcon={rightIcon}
+        rounded={rounded}
+        spacing={spacing}
+        label={label}
+        onClick={onClick}
+      />
     </div>
   );
 };

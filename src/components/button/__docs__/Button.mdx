@@ -1,29 +1,44 @@
-import { Canvas, Meta } from "@storybook/blocks";
+import { Meta, Title, Primary, Controls, Stories, Canvas } from '@storybook/blocks';
 import Example from "./Example.tsx";
 import * as Button from "./Button.stories.tsx";
 
 <Meta of={Button} title="Button" />
 
-# Button
+<Title />
 
-Button component with different props.
+# Default implementation
 
-#### Example
+<Primary />
 
-<Canvas of={Button.Primary} />
+## Inputs
+
+The component accepts the following inputs (props):
+
+<Controls />
+
+---
+
+## Additional variations
+
+
 
 ## Usage
 
 ```ts
-import {Button} from "sld-ui";
+import {Button} from "@webo-digital/ui-components";
 
 const Example = () => {
   return (
       <Button
-        size={"small"}
-        text={"Button"}
-        onClick={()=> console.log("Clicked")}
-        primary
+        label={"Submit"}
+        size={"large"}
+        disabled={false}
+        buttonType={"primary"}
+        leftIcon={"💚"}
+        rightIcon={"🔥"}
+        rounded={"lg"}
+        spacing={"sm"}
+        onClick={() => {}}
       />
   );
 };
@@ -31,10 +46,22 @@ const Example = () => {
 export default Example;
 ```
 
-#### Arguments
 
-- **text** _`() => void`_ - A string that represents the text content of the button.
-- **primary** - A boolean indicating whether the button should have a primary styling or not. Typically, a primary button stands out as the main action in a user interface.
+
+## Arguments
+
+- **label** _`string`_ - A string that represents the text content of the button.
 - **disabled** - A boolean indicating whether the button should be disabled or not. When disabled, the button cannot be clicked or interacted with.
-- **size** - A string with one of three possible values: "small," "medium," or "large." It defines the size or dimensions of the button.
-- **onClick** - A function that is called when the button is clicked. It receives a MouseEventHandler for handling the click event on the button element.
+- **size** - A string with one of three possible values: `default`, `small`, `large`, or `xxl`. It defines the size or dimensions of the button.
+- **onClick** - A function that is called when the button is clicked. It receives a `MouseEventHandler` for handling the click event on the button element.
+- **buttonType** - A string with one of three possible values: `primary`, `secondary`, `warning`, `outline`, `disabled` or `error`. It defines the type of button.
+- **leftIcon** - A string that represents the left icon of the button.
+- **rightIcon** - A string that represents the right icon of the button.
+- **rounded** - A string with one of three possible values: `none`, `sm`, `md`, `lg`, `xl`, `full`. It defines the border radius of the button.
+- **spacing** - A string with one of three possible values: `default`, `small`, `large` or `xxl`. It defines the spacing between the button text and the button icon.
+
+
+
+## Listed below are additional variations of the component.
+
+<Stories/>
