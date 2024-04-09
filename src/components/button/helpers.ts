@@ -18,6 +18,8 @@ export const buttonStyles = cva(
           "bg-white text-gray-600 hover:bg-gray-100 border hover:border-gray-100 border-gray-300 hover:shadow-md",
         disabled: "bg-black text-white border-black cursor-not-allowed",
         error: "bg-red-500 text-white border-red-500 hover:bg-red-600",
+        cds_solid:
+          "bg-cds_primary-700 text-cds_danger-0 hover:bg-cds_primary-600",
       },
       size: {
         default: ["text-base"],

@@ -72,6 +72,7 @@
     "react": "^18.2.0"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.3",
     "cva": "npm:class-variance-authority@^0.7.0",
     "tailwind-merge": "^2.2.2"
   }
