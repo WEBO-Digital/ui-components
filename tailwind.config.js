@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      // Add custom transition properties
+      transitionProperty: {
+        height: "height",
+      },
+    },
   },
   plugins: [],
 };
