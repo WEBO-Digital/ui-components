@@ -1,6 +1,5 @@
 import React, { useState, ReactNode } from "react";
 import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
-import Icon from "../icon/Icon";
 import { cn } from "../../lib/utils";
 import { accordionStyles } from "./helpers";
 
@@ -33,7 +32,9 @@ const AccordionItem: React.FC<
             {UpIcon ? (
               <UpIcon className="w-5 h-5 text-gray-500" />
             ) : (
-              <Icon name="ChevronUpIcon" />
+              <></>
+
+              //   <Icon name="ChevronUpIcon" />
             )}
           </>
         ) : (
@@ -41,7 +42,8 @@ const AccordionItem: React.FC<
             {DownIcon ? (
               <DownIcon className="w-5 h-5 text-gray-500" />
             ) : (
-              <Icon name="ChevronDownIcon" />
+              <></>
+              //   <Icon name="ChevronDownIcon" />
             )}
           </>
         )}
