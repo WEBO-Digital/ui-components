@@ -1,18 +1,26 @@
+import React from "react";
 import "./inputField.css";
-// eslint-disable-next-line react/prop-types
-const PasswordStrengthIllustration = ({ strength }) => {
-  const illustrations = {
-    1: PasswordStrengthStep(1),
-    2: PasswordStrengthStep(2),
-    3: PasswordStrengthStep(3),
-    4: PasswordStrengthStep(4),
-  };
+interface PasswordStrengthIllustrationProps {
+  strength: number;
+}
+
+const PasswordStrengthIllustration: React.FC<
+  PasswordStrengthIllustrationProps
+> = ({ strength }) => {
+  const illustrations = [
+    null, // Add a null element at index 0 to match the strength levels starting at 1
+    PasswordStrengthStep(1),
+    PasswordStrengthStep(2),
+    PasswordStrengthStep(3),
+    PasswordStrengthStep(4),
+  ];
 
   return illustrations[strength] || null;
 };
+
 export default PasswordStrengthIllustration;
 
-const PasswordStrengthStep = (p0: number) => {
+const PasswordStrengthStep = (p0: number): JSX.Element => {
   return (
     <div className="password-strength">
       {p0 === 1 && (
