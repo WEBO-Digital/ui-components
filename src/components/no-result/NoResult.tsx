@@ -1,4 +1,3 @@
-import React from "react";
 // TypeScript type for the props
 type NoResultProps = {
   title?: string;

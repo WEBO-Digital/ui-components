@@ -1,4 +1,3 @@
-import React from "react";
 import "./inputField.css";
 // eslint-disable-next-line react/prop-types
 const PasswordStrengthIllustration = ({ strength }) => {
