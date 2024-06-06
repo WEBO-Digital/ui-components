@@ -13,7 +13,7 @@ export const IconColorSwatch: React.FC<IconProps> = ({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="10" fill="#030712" />
+      <circle cx="12" cy="12" r="10" fill={fill} />
     </svg>
   );
 };
