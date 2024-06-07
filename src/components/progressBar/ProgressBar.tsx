@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 export interface ProgressBarProps {
-  percentage?: string;
+  percentage?: number;
   color?: string;
   title?: string;
 }

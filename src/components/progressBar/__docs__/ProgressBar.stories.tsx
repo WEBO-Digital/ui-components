@@ -14,7 +14,7 @@ export default meta;
 
 export const Primary: StoryObj<ProgressBarProps> = {
   args: {
-    percentage: '40',
+    percentage: 40,
     color: "red",
     title: "Payable and Used",
   },
