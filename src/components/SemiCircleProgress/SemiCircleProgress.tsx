@@ -1,27 +1,26 @@
-import { title } from "process";
-
 export interface SemiCircleProgressProps {
-  stroke?: string;
-  strokeWidth?: number;
-  background?: string;
-  diameter?: number;
+  stroke: string; // Changed to string to accept color values
+  strokeWidth: number;
+  background: string;
+  diameter: number;
   orientation?: string;
   direction?: string;
-  title?: string;
+  title: string;
   showPercentValue?: boolean;
-  percentage?: number;
+  percentage: number;
 }
 export const SemiCircleProgress: React.FC<SemiCircleProgressProps> = ({
   stroke,
-  strokeWidth = 20,
-  background = "#D0D0CE",
-  diameter = 10,
-  orientation = "up",
+  strokeWidth,
+  background,
+  diameter,
+  orientation,
   direction,
   title,
   showPercentValue,
-  percentage = 5,
+  percentage,
 }) => {
+
   const coordinateForCircle: number = diameter / 2;
   const radius: number = (diameter - 2 * strokeWidth) / 2;
   const circumference = Math.PI * radius;
@@ -85,7 +84,6 @@ export const SemiCircleProgress: React.FC<SemiCircleProgressProps> = ({
             transition:
               "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s",
           }}
-
         />
       </svg>
       <div

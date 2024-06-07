@@ -8,7 +8,16 @@ const meta: Meta<typeof SemiCircleProgress> = {
   title: "Components/SemiCircleProgress",
   component: SemiCircleProgress,
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    orientation: {
+      options: ["up", "down"],
+      control: { type: "select" },
+    },
+    direction: {
+      options: ["right", "left"],
+      control: { type: "select" },
+    },
+  },
   parameters: {
     controls: { expanded: true },
   },
@@ -23,6 +32,7 @@ export const Primary: StoryObj<SemiCircleProgressProps> = {
     stroke: "red",
     strokeWidth: 20,
     direction: "right",
-    title:'Tadow'
+    title: "Tadow",
+    background: "#D0D0CE",
   },
 };
