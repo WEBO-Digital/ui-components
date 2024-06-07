@@ -1,5 +1,6 @@
-import { useCallback, useEffect, useState, useRef } from "react";
+import React, { useCallback, useEffect, useState, useRef } from "react";
 import "./rangeSlider.css";
+
 export interface RangeSliderProps {
   min: number;
   max: number;
@@ -60,6 +61,16 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({ min, max, fill }) => {
             outline: "none",
           }}
         />
+        <div
+          className="absolute -bottom-10  mt-[-25px] text-sm text-gray-500"
+          style={{
+            left: `calc(${getPercent(minVal)}% + 4px)`, // Adjusting for the width of the tooltip
+            transform: "translateX(-50%)",
+          }}
+        >
+          £{minVal}
+        </div>
+
         <input
           type="range"
           min={min}
@@ -79,16 +90,23 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({ min, max, fill }) => {
             outline: "none",
           }}
         />
+        <div
+          className="absolute -bottom-10 mt-[-25px] text-sm text-gray-500"
+          style={{
+            left: `calc(${getPercent(maxVal)}% - 8px)`, // Adjusting for the width of the tooltip
+            transform: "translateX(-50%)",
+          }}
+        >
+          £{maxVal}
+        </div>
 
-        <div className="relative w-[200px]">
-          <div className="absolute h-1.5 rounded-sm bg-gray-300 w-full z-10" />
+        <div className="relative w-full">
+          <div className="absolute h-1 rounded-sm bg-[#EFF6FF] w-full z-10 shadow-lg" />
           <div
             ref={range}
-            style={{ backgroundColor: fill }}
-            className="absolute h-1.5 rounded-sm bg-teal-200 z-40"
+            style={{ backgroundColor: fill ? "fill" : "#2563EB" }}
+            className="absolute h-1 rounded-sm bg-teal-200 z-40 "
           />
-          <div className="absolute text-xs mt-5 left-1.5">{minVal}</div>
-          <div className="absolute  text-xs mt-5 right-0">{maxVal}</div>
         </div>
       </div>
     </div>
