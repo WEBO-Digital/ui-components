@@ -7,8 +7,6 @@ export interface TabProps {
   fill?: string;
 }
 export const GroupTab: React.FC<TabProps> = ({ iteration, content, fill }) => {
-  const existingArray = [iteration, content];
-  const newArray = [...existingArray];
   return (
     <div className="flex flex-wrap gap-2">
       {Array(iteration)
