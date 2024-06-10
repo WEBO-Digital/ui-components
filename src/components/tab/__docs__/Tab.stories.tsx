@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { GroupTab, TabProps } from "../Tab";
 const meta: Meta<typeof GroupTab> = {
-  title: "Components/ToolTip",
+  title: "Components/Tab",
   component: GroupTab,
   tags: ["autodocs"],
   argTypes: {},
