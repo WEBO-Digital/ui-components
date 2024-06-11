@@ -1,10 +1,7 @@
 import React from "react";
 import { IconProps } from "../iconProps";
 
-export const IconShow: React.FC<IconProps> = ({
-  size,
-  fill,
-}: IconProps) => {
+export const IconShow: React.FC<IconProps> = ({ size, fill }: IconProps) => {
   return (
     <svg
       width={size}
