@@ -95,6 +95,10 @@ export default {
           900: "#330F0C",
         },
       },
+      fontFamily: {
+        futura: ["Futura", "sans-serif"],
+        figtree: ["Figtree", "sans-serif"],
+      },
     },
   },
   plugins: [],

@@ -20,7 +20,6 @@ export const SemiCircleProgress: React.FC<SemiCircleProgressProps> = ({
   showPercentValue,
   percentage,
 }) => {
-
   const coordinateForCircle: number = diameter / 2;
   const radius: number = (diameter - 2 * strokeWidth) / 2;
   const circumference = Math.PI * radius;
