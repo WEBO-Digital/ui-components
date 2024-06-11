@@ -104,7 +104,7 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({ min, max, fill }) => {
           <div className="absolute h-1 rounded-sm bg-[#EFF6FF] w-full z-10 shadow-lg" />
           <div
             ref={range}
-            style={{ backgroundColor: fill ? "fill" : "#2563EB" }}
+            style={{ backgroundColor: fill ? fill : "#2563EB" }}
             className="absolute h-1 rounded-sm bg-teal-200 z-40 "
           />
         </div>
