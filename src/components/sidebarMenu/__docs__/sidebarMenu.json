@@ -1,0 +1,134 @@
+[
+  {
+    "title": "General",
+    "items": [
+      {
+        "name": "Overview",
+        "link": "/overview",
+        "icons": "fill-overview"
+      },
+      {
+        "name": "Products",
+        "link": "/products",
+        "icons": "fill-product",
+        "children": [
+          {
+            "name": "Profile",
+            "link": "/settings/profile",
+            "icons": "fill-profile"
+          },
+          {
+            "name": "Preferences",
+            "link": "/settings/preferences",
+            "icons": "fill-preferences"
+          }
+        ]
+      },
+      {
+        "name": "Real Time Stock",
+        "link": "/real-time-stock",
+        "icons": "fill-realtime-stock"
+      },
+      {
+        "name": "Orders",
+        "link": "/orders",
+        "icons": "fill-orders",
+        "children": [
+          {
+            "name": "Profile",
+            "link": "/settings/profile",
+            "icons": "fill-profile"
+          },
+          {
+            "name": "Preferences",
+            "link": "/settings/preferences",
+            "icons": "fill-preferences"
+          }
+        ]
+      },
+      {
+        "name": "Invoices",
+        "link": "/invoices",
+        "icons": "fill-orders"
+      }
+    ]
+  },
+  {
+    "title": "Management",
+    "items": [
+      {
+        "name": "Users & Teams",
+        "link": "/management/users",
+        "icons": "fill-users",
+        "children": [
+          {
+            "name": "Add User",
+            "link": "/management/users/add",
+            "icons": "fill-add-user"
+          },
+          {
+            "name": "User List",
+            "link": "/management/users/list",
+            "icons": "fill-user-list"
+          }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "link": "/marketing",
+        "icons": "fill-orders",
+        "children": [
+          {
+            "name": "Add Role",
+            "link": "/management/roles/add",
+            "icons": "fill-add-role"
+          },
+          {
+            "name": "Role List",
+            "link": "/management/roles/list",
+            "icons": "fill-role-list"
+          },
+          {
+            "name": "Role Permissions",
+            "link": "/management/roles/permissions",
+            "icons": "fill-role-permissions"
+          }
+        ]
+      },
+      {
+        "name": "Settings",
+        "link": "/settings",
+        "icons": "fill-orders",
+        "children": [
+          {
+            "name": "Sales Report",
+            "link": "/management/reports/sales",
+            "icons": "fill-sales-report"
+          },
+          {
+            "name": "User Report",
+            "link": "/management/reports/users",
+            "icons": "fill-user-report"
+          }
+        ]
+      },
+      {
+        "name": "Support",
+        "link": "/support",
+        "icons": "fill-orders",
+        "children": [
+          {
+            "name": "Sales Report",
+            "link": "/management/reports/sales",
+            "icons": "fill-sales-report"
+          },
+          {
+            "name": "User Report",
+            "link": "/management/reports/users",
+            "icons": "fill-user-report"
+          }
+        ]
+      }
+    ]
+  }
+]
