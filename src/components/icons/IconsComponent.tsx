@@ -112,7 +112,7 @@ import { IconWarning } from "./fill/warning";
 import { IconWebsite } from "./fill/website";
 import { IconUserCircle } from "./fill/userCircle";
 
-const icons = {
+export const icons = {
   "reg-check": IconCheck,
   "reg-close": IconClose,
   "reg-hide": IconHide,
