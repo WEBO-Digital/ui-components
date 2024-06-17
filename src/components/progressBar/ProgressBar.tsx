@@ -17,8 +17,8 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
     setIsAnimated(true);
   }, [percentage]);
   return (
-    <div className="w-full flex items-center text-xl gap-2">
-      <div>£{min}</div>
+    <div className="w-full flex items-center  gap-2 text-gray-400 text-sm">
+      <div className="">£{min}</div>
       <div className="h-2 bg-neutral-200 dark:bg-neutral-600 w-96 rounded overflow-hidden">
         <div
           className={`h-full rounded transition-all duration-500 ${

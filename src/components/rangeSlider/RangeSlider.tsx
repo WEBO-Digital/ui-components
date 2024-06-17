@@ -40,7 +40,7 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({ min, max, fill }) => {
   }, [maxVal, getPercent]);
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center ">
       <div className="relative w-80">
         <input
           type="range"
