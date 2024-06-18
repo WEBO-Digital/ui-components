@@ -12,11 +12,12 @@ export interface PaymentChildrenProps {
 export interface PaymentProps {
   items: PaymentChildrenProps[];
   borderStyle?: string;
+  stroke?: string;
 }
-const Checkout: React.FC<PaymentProps> = ({ items }) => {
+const Checkout: React.FC<PaymentProps> = ({ items, borderStyle, stroke }) => {
   return (
     <div
-      className={`flex flex-col justify-start gap-8 p-2 w-96 h-auto  border `}
+      className={`flex flex-col justify-start gap-8 p-2 w-96 h-auto  border ${borderStyle} border-4 border-${stroke} border-spacing-8 rounded-lg`}
     >
       <div className="flex gap-2">
         <h6>Free Carriage Threhold</h6>
@@ -37,8 +38,9 @@ const Checkout: React.FC<PaymentProps> = ({ items }) => {
         type="button"
         designType={"solid"}
         varient={"primary"}
-        children="Proceed to Checkout"
-      />
+      >
+        Proceed to Checkout
+      </Button>
     </div>
   );
 };
