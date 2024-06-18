@@ -25,7 +25,10 @@ export default meta;
 export const Primary: StoryObj<PaymentProps> = {
   args: {
     borderStyle: "border-none",
-    stroke: "purple-500",
+    min: 0,
+    max: 100,
+    percentage: 40,
+    color: "red",
     items: [
       {
         subtotal: 2525.55,

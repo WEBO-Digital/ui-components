@@ -12,12 +12,25 @@ export interface PaymentChildrenProps {
 export interface PaymentProps {
   items: PaymentChildrenProps[];
   borderStyle?: string;
-  stroke?: string;
+  percentage?: number;
+  color?: string;
+  min?: number;
+  max?: number;
 }
-const Checkout: React.FC<PaymentProps> = ({ items, borderStyle, stroke }) => {
+const Checkout: React.FC<PaymentProps> = ({
+  items,
+  borderStyle,
+  min,
+  max,
+  percentage,
+  color,
+}) => {
   return (
     <div
-      className={`flex flex-col justify-start gap-8 p-2 w-96 h-auto  border ${borderStyle} border-4 border-${stroke} border-spacing-8 rounded-lg`}
+      style={{
+        borderColor: `${color}`,
+      }}
+      className={`flex flex-col justify-start gap-8 p-2 w-96 h-auto  border ${borderStyle} border-4  border-spacing-8 rounded-lg`}
     >
       <div className="flex gap-2">
         <h6>Free Carriage Threhold</h6>
@@ -25,7 +38,12 @@ const Checkout: React.FC<PaymentProps> = ({ items, borderStyle, stroke }) => {
       </div>
 
       <div className="flex  flex-col p-2 border rounded-lg ">
-        <ProgressBar color="blue" min={0} max={100} percentage={40} />
+        <ProgressBar
+          color={color}
+          min={min}
+          max={max}
+          percentage={percentage}
+        />
         <span className="w-full p-4 pb-0 text-gray-400 text-xs">
           Save £332.65 on shipping cost by adding £2,474.45 more to your order.
         </span>

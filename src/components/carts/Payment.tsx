@@ -22,7 +22,10 @@ const Payments: React.FC<PaymentProps> = ({
 }) => {
   return (
     <div
-      className={`flex flex-col justify-start gap-4 p-2 w-96 h-auto ${borderStyle} border-4 bg-${borderColor}-500 border-spacing-4 rounded-lg	`}
+      style={{
+        borderColor: `${borderColor}`,
+      }}
+      className={`flex flex-col justify-start gap-4 p-2 w-96 h-auto ${borderStyle} border-4  border-spacing-4 rounded-lg	`}
     >
       <h6>Payment</h6>
       <CartTab payment={payment} description={description} amount={amount} />
