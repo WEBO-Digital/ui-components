@@ -60,14 +60,13 @@ const Pagination: React.FC<PaginationProps> = ({
   const startIndex = (currentPage - 1) * showCount;
   const endIndex = Math.min(startIndex + showCount, totalItems);
   const validCurrentPage = Math.min(Math.max(currentPage, 1), totalPages);
-
   // Update the currentPage state if needed
   useEffect(() => {
     if (currentPage !== validCurrentPage && validCurrentPage !== 0) {
       setCurrentPage(validCurrentPage);
     }
   }, [currentPage, validCurrentPage, setCurrentPage]);
-
+  const totalCount = Math.ceil(totalItems / showCount);
   return (
     <div className="pagination py-4 px-6 flex items-center flex-wrap text-sm justify-between bg-danger-0">
       <div
@@ -110,7 +109,7 @@ const Pagination: React.FC<PaginationProps> = ({
                     setCurrentPage(val);
                   }}
                 />
-                <span className="noWrap">of {totalPages}</span>
+                <span className="noWrap">of {totalCount}</span>
               </div>
               <button
                 className={`next text-sm ${

@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "../../lib/utils";
 
 type ButtonSize = "small" | "medium" | "large";
-type ButtonDesignType = "solid" | "outline" | "tertiary";
+type ButtonDesignType = "solid" | "outline" | "tertiary" | "none";
 type ButtonVarient =
   | "primary"
   | "yellow"
@@ -30,18 +30,21 @@ const buttonVariantClasses: Record<
     outline:
       "bg-transparent border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white",
     tertiary: "text-primary-600",
+    none: "",
   },
   yellow: {
     solid: "bg-yellow-600 text-white hover:bg-yellow-500 focus:bg-yellow-800",
     outline:
       "bg-transparent border border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white",
     tertiary: "text-yellow-600",
+    none: "",
   },
   gray: {
     solid: "bg-gray-600 text-white hover:bg-gray-500 focus:bg-gray-800",
     outline:
       "bg-transparent border border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white",
     tertiary: "text-gray-600",
+    none: "",
   },
   warning: {
     solid:
@@ -49,18 +52,21 @@ const buttonVariantClasses: Record<
     outline:
       "bg-transparent border border-warning-600 text-warning-600 hover:bg-warning-600 hover:text-white",
     tertiary: "text-warning-600",
+    none: "",
   },
   green: {
     solid: "bg-green-600 text-white hover:bg-green-500 focus:bg-green-800",
     outline:
       "bg-transparent border border-green-600 text-green-600 hover:bg-green-600 hover:text-white",
     tertiary: "text-green-600",
+    none: "",
   },
   blue: {
     solid: "bg-blue-600 text-white hover:bg-blue-500 focus:bg-blue-800",
     outline:
       "bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white",
     tertiary: "text-blue-600",
+    none: "",
   },
 };
 
