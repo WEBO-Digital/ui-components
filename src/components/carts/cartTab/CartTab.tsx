@@ -47,9 +47,9 @@ export const CartTab: React.FC<CartTabProps> = ({
             <Button
               size="small"
               type="button"
+              designType="tertiary"
               varient="primary"
-              designType="none"
-              classes={`transition-colors duration-300 flex gap-2 w-full rounded-lg ${
+              classes={`transition-colors duration-300 flex gap-2 text-[#000000] w-full rounded-lg ${
                 idx === activeTabIndex
                   ? "border-black bg-white shadow text-black"
                   : "border-transparent hover:border-gray-200"
