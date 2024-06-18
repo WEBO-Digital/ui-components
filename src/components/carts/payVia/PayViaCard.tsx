@@ -19,9 +19,10 @@ export const PayViaCard: React.FC<paymentProp> = ({ buttonString }) => {
         type="button"
         designType={"solid"}
         varient={"primary"}
-        children={buttonString}
         classes="shadow w-full"
-      />
+      >
+        {buttonString}
+      </Button>
     </div>
   );
 };
