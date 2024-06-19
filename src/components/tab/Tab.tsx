@@ -34,6 +34,7 @@ export const GroupTab: React.FC<TabProps> = ({
         {tabsData.map((tab, idx) => {
           return (
             <div
+              key={idx}
               className={`py-2 border-b-4 transition-colors duration-300 flex gap-4 ${
                 idx === activeTabIndex
                   ? "border-black"
