@@ -1,5 +1,8 @@
+import React from "react";
+
+// Define the props interface
 export interface SemiCircleProgressProps {
-  stroke: string; // Changed to string to accept color values
+  stroke: string;
   strokeWidth: number;
   background: string;
   diameter: number;
@@ -9,41 +12,37 @@ export interface SemiCircleProgressProps {
   showPercentValue?: boolean;
   percentage: number;
 }
+
+// Define the component
 export const SemiCircleProgress: React.FC<SemiCircleProgressProps> = ({
   stroke,
   strokeWidth,
   background,
   diameter,
-  orientation,
-  direction,
+  orientation = "up",
+  direction = "right",
   title,
-  showPercentValue,
+  showPercentValue = true,
   percentage,
 }) => {
   const coordinateForCircle: number = diameter / 2;
   const radius: number = (diameter - 2 * strokeWidth) / 2;
   const circumference = Math.PI * radius;
-  let percentageValue;
-  if (percentage > 100) {
-    percentageValue = 100;
-  } else if (percentage < 0) {
-    percentageValue = 0;
-  } else {
-    percentageValue = percentage;
-  }
+
+  // Ensure percentage is within bounds
+  const percentageValue = Math.min(Math.max(percentage, 0), 100);
   const semiCirclePercentage = percentageValue * (circumference / 100);
+
   let rotation;
   if (orientation === "down") {
-    if (direction === "left") {
-      rotation = "rotate(180deg) rotateY(180deg)";
-    } else {
-      rotation = "rotate(180deg)";
-    }
+    rotation =
+      direction === "left"
+        ? "rotate(180deg) rotateY(180deg)"
+        : "rotate(180deg)";
   } else {
-    if (direction === "right") {
-      rotation = "rotateY(180deg)";
-    }
+    rotation = direction === "right" ? "rotateY(180deg)" : "";
   }
+
   return (
     <div
       className="semicircle-container flex flex-col justify-center items-center"
