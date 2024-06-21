@@ -51,7 +51,10 @@ table tr:nth-child(even) {
     padding-left: 50%;
     padding-right: 0.5rem;
   }
-
+  .responsive-table th,
+  .responsive-table td {
+    min-width: 100%; /* Adjust this percentage as needed */
+  }
   .responsive-table td::before {
     content: attr(data-title);
     position: absolute;

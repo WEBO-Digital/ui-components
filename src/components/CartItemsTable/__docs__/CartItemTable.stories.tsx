@@ -4,12 +4,18 @@ const meta: Meta<typeof CartItemTable> = {
   title: "Components/CartItemTable",
   component: CartItemTable,
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    variant: {
+      options: ["Show Variant", "Hide Variant"],
+      control: { type: "select" },
+    },
+  },
 };
 export default meta;
 
 export const Primary: StoryObj<cartTableProps> = {
   args: {
+    desiredRows: 4,
     items: [
       {
         size: 6,
@@ -36,5 +42,6 @@ export const Primary: StoryObj<cartTableProps> = {
         quantity: 7,
       },
     ],
+    variant: "Show Variants",
   },
 };
