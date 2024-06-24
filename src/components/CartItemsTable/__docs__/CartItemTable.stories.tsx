@@ -4,44 +4,52 @@ const meta: Meta<typeof CartItemTable> = {
   title: "Components/CartItemTable",
   component: CartItemTable,
   tags: ["autodocs"],
-  argTypes: {
-    variant: {
-      options: ["Show Variant", "Hide Variant"],
-      control: { type: "select" },
-    },
-  },
+  argTypes: {},
 };
 export default meta;
 
 export const Primary: StoryObj<cartTableProps> = {
   args: {
-    desiredRows: 4,
+    desiredRows: 2,
     items: [
       {
         size: 6,
         leadTime: "5 - 7 Days (Est. 17th Mar, 2024)",
         itemStatus: "badge",
         quantity: 7,
+        orderQuantity: 5,
+        amount: 232499,
+        returnInfo: "dsfsfsfsfsfsfsfsf",
       },
       {
         size: 6,
         leadTime: "5 - 7 Days (Est. 17th Mar, 2024)",
         itemStatus: "badge",
         quantity: 7,
+        orderQuantity: 5,
+        amount: 232499,
+        returnInfo: "dsfsfsfsfsfsfsfsf",
       },
       {
         size: 6,
         leadTime: "5 - 7 Days (Est. 17th Mar, 2024)",
         itemStatus: "badge",
         quantity: 7,
+        orderQuantity: 5,
+        amount: 232499,
+        returnInfo: "dsfsfsfsfsfsfsfsf",
       },
+
       {
         size: 6,
         leadTime: "5 - 7 Days (Est. 17th Mar, 2024)",
         itemStatus: "badge",
         quantity: 7,
+        orderQuantity: 5,
+        amount: 232499,
+        returnInfo: "dsfsfsfsfsfsfsfsf",
       },
     ],
-    variant: "Show Variants",
+    returnOrder: false,
   },
 };
