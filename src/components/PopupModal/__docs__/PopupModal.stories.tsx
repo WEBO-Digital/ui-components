@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import PopupModal from "../PopupModal";
+import PopupModal, { PopupProps } from "../PopupModal";
 import { ProgressBarProps } from "../../progressBar/ProgressBar";
 const meta: Meta<typeof PopupModal> = {
   title: "Components/PopupModal",
@@ -12,11 +12,15 @@ const meta: Meta<typeof PopupModal> = {
 };
 export default meta;
 
-export const Primary: StoryObj<ProgressBarProps> = {
+export const Primary: StoryObj<PopupProps> = {
   args: {
-    min: 0,
-    max: 100,
-    percentage: 40,
-    color: "red",
+    title: "Popup-Modal",
+    children: (
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel minus sed
+        atque hic veritatis mollitia esse ipsum iure sint quos at nisi, fuga
+        eius, sequi maxime sit. Reiciendis, quas quidem!
+      </p>
+    ),
   },
 };

@@ -1,8 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import Button from "../button/Button";
 import { IconClose } from "../icons/regular/close";
-
-const PopupModal = () => {
+export interface PopupProps {
+  title: string;
+  children: ReactNode;
+}
+const PopupModal: React.FC<PopupProps> = ({ title, children }) => {
   const [showModal, setShowModal] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -39,7 +42,7 @@ const PopupModal = () => {
         handleClick={() => setShowModal(true)}
         classes="text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg mr-1 mb-1 ease-linear transition-all duration-150"
       >
-        Open Popup
+        {title}
       </Button>
       {showModal && (
         <>
@@ -56,7 +59,7 @@ const PopupModal = () => {
                     type="button"
                     designType={"solid"}
                     varient={"primary"}
-                    classes="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    classes="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold"
                     handleClick={() => setShowModal(false)}
                   >
                     <IconClose size={24} fill="black" />
@@ -64,10 +67,7 @@ const PopupModal = () => {
                 </div>
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Vel minus sed atque hic veritatis mollitia esse ipsum iure
-                    sint quos at nisi, fuga eius, sequi maxime sit. Reiciendis,
-                    quas quidem!
+                    {children}
                   </p>
                 </div>
                 <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
@@ -77,7 +77,7 @@ const PopupModal = () => {
                     designType={"tertiary"}
                     varient={"primary"}
                     handleClick={checkButton}
-                    classes="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm mr-1 mb-1 ease-linear transition-all duration-150"
+                    classes="  font-bold uppercase px-6 py-2 text-sm mr-1 mb-1 ease-linear transition-all duration-150"
                   >
                     Close
                   </Button>
@@ -87,7 +87,7 @@ const PopupModal = () => {
                     designType={"solid"}
                     varient={"primary"}
                     handleClick={() => setShowModal(false)}
-                    classes="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg mr-1 mb-1 ease-linear transition-all duration-150"
+                    classes="text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg mr-1 mb-1 ease-linear transition-all duration-150"
                   >
                     Save Changes
                   </Button>
