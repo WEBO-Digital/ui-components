@@ -1,0 +1,67 @@
+.responsive-table {
+  width: 100%;
+  table-layout: fixed; /* Add this line */
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 0.5rem;
+  text-align: left; /* Change text alignment to center */
+  width: 20%; /* Adjust this percentage as needed */
+}
+.responsive-table th {
+  /* color: var(--primary-500); */
+  color: #6b7280;
+}
+.responsive-table th {
+  background-color: #f2f2f2;
+  padding: 0.5rem; /* Use the same padding as table cells */
+  vertical-align: middle; /* Align vertically in the middle */
+}
+
+.responsive-table th:last-child,
+.responsive-table td:last-child {
+  padding-right: 0;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+@media (max-width: 768px) {
+  .responsive-table {
+    border: none;
+  }
+
+  .responsive-table thead {
+    display: none;
+  }
+
+  .responsive-table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+  }
+
+  .responsive-table td {
+    display: block;
+    text-align: right;
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    padding-right: 0.5rem;
+  }
+  .responsive-table th,
+  .responsive-table td {
+    min-width: 100%; /* Adjust this percentage as needed */
+  }
+  .responsive-table td::before {
+    content: attr(data-title);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 0.5rem;
+    font-weight: bold;
+    text-align: left;
+  }
+}
