@@ -1,3 +1,2 @@
 // components/index.ts
-export * from "./button"; // Add more exports for other components as needed
-export * from "./icon";
+export * from "./button/Button"; // Add more exports for other components as needed

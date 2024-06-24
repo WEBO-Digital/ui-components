@@ -1,5 +1,4 @@
-import Button from "../../components/button";
-import Icon from "../../components/icon/Icon";
+import Button from "../../components/button/Button";
 import { ScrapAssistLogo } from "./assets/logo";
 
 const Login = () => {
@@ -26,16 +25,13 @@ const Login = () => {
         </p>
         <form>
           <Button
-            size="xxl"
-            className="text-md"
-            rightIcon={
-              <Icon name="SparklesIcon" className="animate-pulse" height={16} />
-            }
-            buttonType={"cds_solid"}
-            spacing={"xxl"}
-            label="Logging In"
+            size="large"
             type="button"
-          />
+            designType={"solid"}
+            varient={"primary"}
+          >
+            button
+          </Button>
         </form>
       </main>
       <footer className="antialiased text-cds_accent-50 text-center mb-5">
