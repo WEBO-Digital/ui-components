@@ -21,8 +21,18 @@ export interface cartTableProps {
   returnOrder?: boolean;
 }
 export const CartItemTable: React.FC<cartTableProps> = ({
-  items,
-  desiredRows,
+  items = [
+    {
+      size: 6,
+      leadTime: "5 - 7 Days (Est. 17th Mar, 2024)",
+      itemStatus: "badge",
+      quantity: 7,
+      orderQuantity: 5,
+      amount: 232499,
+      returnInfo: "dsfsfsfsfsfsfsfsf",
+    },
+  ],
+  desiredRows = 1,
   returnOrder = false,
 }) => {
   const totalPages = Math.ceil(items.length);

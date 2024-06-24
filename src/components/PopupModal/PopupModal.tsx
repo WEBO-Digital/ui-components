@@ -1,5 +1,6 @@
 import React, { ReactNode, useEffect, useRef, useState } from "react";
 import Button from "../button/Button";
+import { IconClose } from "../icons/regular/close";
 export interface PopupProps {
   title: string;
   children: ReactNode;
@@ -46,9 +47,14 @@ const PopupModal: React.FC<PopupProps> = ({ title, children }) => {
               ref={modalRef}
               className="relative w-auto my-6 mx-auto max-w-3xl"
             >
-              <span>close</span>
               <div className="border-0 rounded-lg shadow-lg flex flex-col w-full bg-white p-5 relative">
                 {children}
+                <span
+                  className="-top-3 right-0 absolute"
+                  onClick={() => setShowModal(false)}
+                >
+                  <IconClose fill="red" size={22} />
+                </span>
               </div>
             </div>
           </div>
